@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Hidden File Hunter 2.0
+Hidden File Hunter 1.0
 ======================
 
 A safe, read-only scanner that finds hidden (and optionally system) files on
@@ -84,7 +84,7 @@ from PySide6.QtWidgets import (
 )
 
 APP_NAME = "Hidden File Hunter"
-APP_VERSION = "2.0"
+APP_VERSION = "1.0"
 ORG_NAME = "jozmoz"
 
 IS_WINDOWS = os.name == "nt"
@@ -716,7 +716,7 @@ class ScannerThread(QThread):
                         batch = []
                         last_batch = now
 
-                if handle is not None and now - last_flush >= 2.0:
+                if handle is not None and now - last_flush >= 1.0:
                     try:
                         handle.flush()
                     except OSError:
